@@ -16,10 +16,10 @@ def home():
     GPIO.setmode(GPIO.BOARD)   # Use physical pin numbering
     GPIO.setup(8, GPIO.OUT, initial=GPIO.LOW)
     GPIO.output(8, GPIO.HIGH) # Turn on
-    sleep(2)                  # Sleep for 1 second
+    sleep(2)                  # gitSleep for 1    second
     GPIO.output(8, GPIO.LOW)  # Turn off
     return jsonify([{'name':'frogconn'}])
 
 # If we're running in stand alone mode, run the application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=5000)

@@ -21,18 +21,6 @@
 
 <body class="pushable">
     <div class="pusher" id="app">
-        <div class="ui container">
-            <div class="ui menu stackable" id="main-menu">
-                <router-link :to="{ name: 'home' }" class="item header">Python Application Webinterface</router-link>
-                <router-link :to="{ name: 'alarms' }" class="item">Alarms</router-link>
-                <router-link :to="{ name: 'history' }" class="item">History</router-link>
-                <router-link :to="{ name: 'about' }" class="item">About</router-link>
-                <div class="right menu">
-                    <a class="item ui green label" v-if="alarmIsNotRunning">Everything is ok...</a>
-                    <a class="item ui red label" v-else v-on:click="stopAlarms">Disable alarm</a>
-                </div>
-            </div>
-        </div>
         <div class="ui container" style="padding-bottom: 20px;">
             <router-view></router-view>
             <div class="ui inverted vertical footer segment form-page custom-copyright noselect">
